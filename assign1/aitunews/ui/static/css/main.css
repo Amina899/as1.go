@@ -1,0 +1,292 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    background-color: #ecf0f1;
+    color: purple;
+    overflow-y: scroll;
+}
+
+header, nav, main, footer {
+    padding: 2px calc((100% - 800px) / 2) 0;
+}
+
+main {
+    margin-top: 54px;
+    margin-bottom: 54px;
+    min-height: calc(100vh - 345px);
+    overflow: auto;
+}
+
+h1 a {
+    font-size: 36px;
+    font-weight: bold;
+    background-image: url("ui/static/img/logo2.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    height: 36px;
+    padding-left: 50px;
+    position: relative;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    color: darkblue;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 36px;
+    position: relative;
+    top: -9px;
+}
+
+a {
+    color: dodgerblue; /* Green link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple; /* Lighter green color on hover */
+    text-decoration: underline;
+}
+
+/* Form and Button Styles */
+a.button,
+input[type="submit"] {
+    background-color: #3498db; /* Blue button color */
+    border-radius: 3px;
+    color: #fff;
+    padding: 18px 27px;
+    border: none;
+    display: inline-block;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+a.button:hover,
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+textarea {
+    color: #34495e; /* Dark blue text color */
+    background: #ecf0f1; /* Light gray background */
+    border: 1px solid #bdc3c7; /* Lighter border color */
+    border-radius: 3px;
+    padding: 0.75em 18px;
+    width: 100%;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 9px;
+}
+
+.error {
+    color: #e74c3c; /* Red error message color */
+    font-weight: bold;
+    display: block;
+}
+
+.error + textarea,
+.error + input {
+    border-color: #e74c3c !important; /* Red border for error input */
+    border-width: 2px !important;
+}
+
+/* Table Styles */
+table {
+    background: #fff; /* White table background */
+    border: 1px solid #bdc3c7; /* Lighter border color */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 9px 18px;
+}
+
+th:last-child, td:last-child {
+    text-align: right;
+    color: #6A6C6F;
+}
+
+tr {
+    border-bottom: 1px solid #bdc3c7; /* Lighter border color */
+}
+
+tr:nth-child(2n) {
+    background-color: #f7f9fa; /* Slightly darker background for even rows */
+}
+
+/* Header and Navigation Styles */
+header {
+    background: deepskyblue; /* Blue gradient background */
+    border-bottom: 1px solid purple; /* Slightly darker blue border */
+    overflow: auto;
+    padding-top: 33px;
+    padding-bottom: 27px;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    border-bottom: 1px solid #bdc3c7; /* Lighter border color */
+    padding-top: 17px;
+    padding-bottom: 15px;
+    background: #f7f9fa; /* Light gray background */
+    height: 60px;
+    color: #6A6C6F;
+}
+
+nav a {
+    margin-right: 1.5em;
+    display: inline-block;
+    color: #34495e; /* Dark blue color for inactive links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav a:hover {
+    color: dodgerblue; /* Lighter green color on hover */
+    text-decoration: underline;
+}
+
+nav a.active {
+    color: #8e44ad; /* Purple color for active state */
+}
+
+nav form {
+    display: inline-block;
+    margin-left: 1.5em;
+}
+
+nav div {
+    width: 50%;
+    float: left;
+}
+
+nav div:last-child {
+    text-align: right;
+}
+
+nav div:last-child a {
+    margin-left: 1.5em;
+    margin-right: 0;
+}
+
+nav a.live {
+    color: #34495e; /* Dark blue color for active link */
+    cursor: default;
+}
+
+nav a.live:hover {
+    text-decoration: none;
+}
+
+nav a.live:after {
+    content: '';
+    display: block;
+    position: relative;
+    left: calc(50% - 7px);
+    top: 9px;
+    width: 14px;
+    height: 14px;
+    background: #f7f9fa; /* Light gray background for active link indicator */
+    border-left: 1px solid #bdc3c7; /* Lighter border color */
+    border-bottom: 1px solid #bdc3c7; /* Lighter border color */
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+/* News Styles */
+.news {
+    background-color: #ecf0f1; /* Light gray background */
+    border: 1px solid #bdc3c7; /* Lighter border color */
+    border-radius: 3px;
+}
+
+.news pre {
+    padding: 18px;
+    border-top: 1px solid #bdc3c7; /* Lighter border color */
+    border-bottom: 1px solid #bdc3c7; /* Lighter border color */
+}
+
+.news .metadata {
+    background-color: #f7f9fa; /* Light gray background */
+    color: #6A6C6F;
+    padding: 0.75em 18px;
+    overflow: auto;
+}
+
+.news .metadata span {
+    float: right;
+}
+
+.news .metadata strong {
+    color: #34495e; /* Dark blue metadata text color */
+}
+
+.news .metadata time {
+    display: inline-block;
+}
+
+.news .metadata time:first-child {
+    float: left;
+}
+
+.news .metadata time:last-child {
+    float: right;
+}
+
+/* Flash and Error Styles */
+div.flash {
+    color: #fff;
+    font-weight: bold;
+    background-color: purple; /* Blue flash message background */
+    padding: 18px;
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+div.error {
+    color: #fff;
+    background-color: #e74c3c; /* Red error background */
+    padding: 18px;
+    margin-bottom: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    border-top: 1px solid #bdc3c7; /* Lighter border color */
+    padding-top: 17px;
+    padding-bottom: 15px;
+    background: #f7f9fa; /* Light gray background */
+    height: 60px;
+    color: #6A6C6F;
+    text-align: center;
+}

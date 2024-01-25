@@ -1,0 +1,12 @@
+{{template "base" .}}
+
+{{define "title"}}Categories{{end}}
+
+{{define "main"}}
+    <h2>Categories</h2>
+    <ul>
+        {{range .Categories}}
+            <li><a href='/categories/{{.Name}}'>{{.Name}}</a></li>
+        {{end}}
+    </ul>
+{{end}}

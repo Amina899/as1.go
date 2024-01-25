@@ -1,0 +1,12 @@
+{{template "base" .}}
+
+{{define "title"}}Contacts{{end}}
+
+{{define "main"}}
+    <h2>Contacts</h2>
+    <ul>
+        {{range .Contacts}}
+            <li>{{.Name}} - {{.Email}} - {{.Message}}</li>
+        {{end}}
+    </ul>
+{{end}}
